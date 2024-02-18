@@ -1,58 +1,169 @@
+/* Set the background color for the body */
 body {
-  background-color: #e5e5e5;
+  background-color: #F8F9FE;
 }
 
+/* Set the font and alignment for the App */
 .App {
   font-family: sans-serif;
   text-align: center;
 }
 
-.component {
-  background-color: white;
-  width: 25%;
-  max-width: 600px;
-  margin: 1em auto;
-  padding-bottom: 2em;
-  border: 0.1px solid black;
+/* Style for each todo item */
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Style for the text of each todo item */
+.todo-item p {
+  color: #888;
+}
+
+/* Style for completed tasks */
+.completed {
+  text-decoration: line-through;
+}
+
+/* Style for the todo list */
+.todo-list {
+  margin: 20px auto;
+  max-width: 400px;
+  padding: 0;
+  list-style: none;
+}
+
+/* Style for the header of the todo list */
+.header-todo {
+  color: #696987;
+}
+
+/* Style for the wrapper of the add task button and input field */
+.wrapper-add-task {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  align-items: center;
+  gap: 2px;
+  width: 100%;
+}
+
+/* Style for the add task button */
+.button-add-task {
+  background-color: #6171ED;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* Style for the input field to add a new task */
+.input-add-task {
+  width: 100%;
+  padding: 5px;
+  margin: 8px 0;
+  border: 2px solid #6171ED;
+  border-radius: 4px;
+}
+
+/* Style for the form to add a new task */
+.form-add-task {
+  width: 60%;
+}
+
+/* Style for the wrapper of the todo items */
+.wrapper-todo-item {
+  background-color: #ECEDF6;
+  padding: 10px;
   border-radius: 10px;
 }
 
-.musicCover {
-  border-radius: 10%;
-}
-
-.playButton {
-  background: none;
+/* Style for the delete task button */
+.button-delete-task {
+  background-color: #F44336;
   border: none;
-  align-items: center;
-  justify-content: center;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
-.subTitle {
-  margin-top: -1em;
-  color: #4f4f4f;
+/* Style for the edit task button */
+.button-edit-task {
+  background-color: #6171ED;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
-.time {
-  margin: 0 auto;
-  width: 80%;
+/* Style for the wrapper of the delete and edit buttons */
+.wrapper-buttons {
   display: flex;
   justify-content: space-between;
-  color: #828282;
-  font-size: smaller;
+  align-items: center;
 }
 
-.timeline {
-  width: 80%;
-  background-color: #27ae60;
+/* Style for the checkbox of each todo item */
+.checkbox-todo-item {
+  -webkit-appearance: none; /* Remove default style on various browsers */
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px; /* Width of checkbox */
+  height: 20px; /* Height of checkbox */
+  border: 2px solid #555; /* Border color of checkbox */
+  border-radius: 4px; /* Make checkbox corners slightly round */
+  cursor: pointer; /* Change cursor to pointer when mouse is over checkbox */
+  position: relative; /* Relative position for pseudo-elements */
 }
 
-input[type="range"] {
-  background-color: #27ae60;
+/* Style for the checkbox when it is checked */
+.checkbox-todo-item:checked {
+  background-color: #6171ED; /* Change background color when checkbox is selected */
 }
 
-@media (max-width: 900px) {
-  .component {
-    width: 50%;
-  }
+/* Style for the checkmark when the checkbox is checked */
+.checkbox-todo-item:checked:after {
+  content: ""; /* Add content for pseudo-element */
+  position: absolute;
+  left: 6px; /* Position from left side */
+  top: 0px; /* Position from top */
+  width: 3px; /* Width of checkmark */
+  height: 10px; /* Height of checkmark */
+  border: solid white; /* Color and type of border for checkmark */
+  border-width: 0 2px 2px 0; /* Border thickness to create checkmark shape */
+  transform: rotate(45deg); /* Rotate pseudo-element to create checkmark shape */
+}
+
+/* Style for the form to edit a task */
+.form-edit-task {
+  width: 100%;
+}
+
+/* Style for the input field to edit a task */
+.input-edit-task {
+  width: 65%;
+  padding: 5px;
+  margin: 8px 0;
+  border: 2px solid #6171ED;
+  border-radius: 4px;
 }
